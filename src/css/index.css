@@ -1,0 +1,609 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+img{
+    display: block;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent 0 solid;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header{
+    background-color: #FFEA00;
+}
+
+.header-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.a-logo{
+    display: flex;
+    align-items: center;
+}
+
+.img-logo-header{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.header-button{
+    background-color: transparent;
+    border: transparent;
+    padding: 0;
+    fill: #000;
+    transition: fill 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.header-button:hover,
+.header-button:focus {
+    fill: greenyellow;
+}
+
+.is-open{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.close-menu{
+    position: absolute;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    top: 24px;
+    right: 24px;
+    border: 2px solid #FFEA00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: fill 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.close-menu:hover,
+.close-menu:focus{
+    fill: #FFEA00;
+    border: none;
+}
+
+.mobile-version{
+    overflow-y: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 0 0 0 15px;
+    margin: 0;
+    transition: opacity 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955), visibility 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.list-menu-header{
+    margin-top: 25px;
+    width: 90%;
+}
+
+.item-menu-header{
+    padding: 0;
+    display: block;
+}
+
+.item-menu-header:hover,
+.item-menu-header:focus{
+    color: #FFEA00;
+}
+
+.img-menu-header{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.p-menu-header{
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.72px;
+    transition: color 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.div-button-menu{
+    position: relative;
+}
+
+.button-menu{
+    background-color: transparent;
+    border: 0;
+}
+
+.list-button-menu{
+    width: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: #000000;
+    z-index: 2;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    transition: transform 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.button-menu-focus{
+    width: 275px;
+    margin: 0;
+    padding: 5px;
+    white-space: normal;
+    clip-path: inset(0);
+    clip: auto;
+    overflow: visible;
+    transform: translateY(0);
+}
+
+.item-button-menu{
+    font-size: 18px;
+    color: #FFEA00;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.nav{
+    flex: 1;
+}
+
+.social-address-modal{
+    padding-bottom: 15px;
+}
+
+.selects{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-lisa{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-biografy{
+    width: 200px;
+}
+
+.a-about-liza{
+    display: flex;
+    flex-direction: column;
+    color: #FFEA00;
+    font-family: 'Nova Round', 'Times New Roman', 'Roboto',  sans-serif;
+    -webkit-text-stroke: 0.5px #000;
+    text-stroke: 0.5px #000;
+}
+
+.a-about-liza:hover{
+    color: yellowgreen;
+}
+
+footer{
+    background-color: #FFEA00;
+}
+
+.footer-conteiner{
+    margin: 15px 30px;
+    max-width: 430px;
+}
+
+.logo-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-logo-footer{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.list-menu-footer{
+    margin: 0;
+}
+
+.item-menu-footer{
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.72px;
+    transition: color 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.item-menu-footer:hover,
+.item-menu-footer:focus{
+    color: yellowgreen;
+}
+
+.selected-item{
+    color: red;
+}
+
+.list-icons-footer{
+    display: flex;
+    gap: 10px;
+}
+
+.link-footer{
+    fill: #000;
+    transition: fill 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.svg-footer{
+    width: 30px;
+    height: 30px;
+}
+
+.link-footer:hover{
+    fill: greenyellow;
+}
+
+.link-address{
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.72px;
+}
+
+
+
+
+.gallery{
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery li{
+    display: flex;
+    
+}
+
+.button-gallery{
+    width: 200px;
+    padding: 0;
+    border: transparent 0 solid;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.img-manual{
+    width: 100%;
+}
+
+.button-for-more{
+    width: 100%;
+    height: 20px;
+    background-color: #FFEA00;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-manual{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    background-color: #ffffffcc;
+    transform: translateY(100%);
+    z-index: 1;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-gallery:hover .p-manual{
+    transform: translateY(0);
+}
+
+.modal-gallery{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffcc;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (min-width:768px){
+    .container {
+        width: 100%;
+        max-width: 800px;
+        padding: 0;
+    }
+
+    .modal-container{
+        padding: 0;
+    }
+
+    .mobile-version{
+        background-color: transparent;
+        flex-direction: row;
+        position: static;
+        padding: 0;
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+        overflow: visible;
+    }
+
+    .is-open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .open-menu{
+        display: none;
+        position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+    }
+
+    .close-menu {
+        display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .a-logo{
+        margin-left: 20px;
+    }
+
+    .img-logo-header{
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav{
+        min-width: 100%;
+    }
+
+    .header-div{
+        height: 100px;
+    }
+
+    .item-menu-header span::before {
+        content: attr(data-text); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+        z-index: -1;
+    }
+
+    .item-menu-header:hover,
+    .item-menu-header:focus{
+        color: yellowgreen;
+    }
+
+    .header-div{
+        justify-content: center;
+    }
+
+    .list-menu-header{
+        display: flex;
+        justify-content:space-between;
+        margin-left: auto;
+        margin-right: 30px;
+        max-width: 400px;
+    }
+
+    .item-menu-header{
+    position: relative;
+    border-radius: 50%;
+    }
+
+    .p-menu-header{
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-0%, -0%);
+    }
+
+    .letter-menu-headaer{
+        position: absolute;
+        width: 0;
+        transform-origin: 0% 0%;
+        padding-top: 50px;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    .header-menu-for-lessons-two{
+        padding-top: 65px;
+    }
+
+    .header-menu-for-teachers-two{
+        padding-top: 65px;
+    }
+
+    .social-address-modal{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .about-lisa{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .form-for-img-liza-main{
+        clip-path: ellipse(48.6% 40% at 50% 50%);
+        transform: rotate(20deg);
+    }
+
+    .img-biografy{
+        transform: rotate(-20deg);
+    }
+
+    .text-about-liza{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .full-name{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .p-about-liza{
+        text-align: center;
+    }
+
+    .p-about-liza span{
+        display: block;
+    }
+
+    .another-about-liza{
+        margin-top: 20px;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-conteiner{
+        display: flex;
+        width: 100%;
+        max-width: 800px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-menu{
+        width: 100%;
+        max-width: 450px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .a-logo-footer{
+        margin-left: 20px;
+    }
+
+    .img-logo-footer{
+        width: 90px;
+        height: 90px;
+    }
+
+    .list-menu-footer{
+        display: block;
+    }
+
+    .item-menu-footer span{
+        position: relative;
+        text-decoration: none;
+    }
+
+    .item-menu-footer span::before {
+        content: attr(data-text); 
+        position: absolute;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+}
